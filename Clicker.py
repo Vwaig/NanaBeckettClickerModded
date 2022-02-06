@@ -6,17 +6,19 @@ import time
 from threading import Thread
 from collections import Counter
 
-#--------------------------------------------------------------------------#
-#--------------------------------------------------------------------------#
-#| |       _   _                      ____    __  __           _        | |#
+# ________________________________________________________________________ #
+#|    ________________________________________________________________    |#
+#|  /      _   _                      ____    __  __           _       \  |#
 #| |      | \ | | __ _ _ __   __ _   | __ )  |  \/  | ___   __| |       | |#
 #| |      |  \| |/ _` | '_ \ / _` |  |  _ \  | |\/| |/ _ \ / _` |       | |#
 #| |      | |\  | (_| | | | | (_| |  | |_) | | |  | | (_) | (_| |       | |#
 #| |      |_| \_|\__,_|_| |_|\__,_|  |____/  |_|  |_|\___/ \__,_|       | |#
 #| |                                                                    | |#
-#--------------------------------------------------------------------------#
-#                          Status - Up to date                             #
-#--------------------------------------------------------------------------#
+#| |--------------------------------------------------------------------| |#
+#| |--------------------------------------------------------------------| |#
+#| |                       Status - Up to date                          | |#
+#|  \__________________________________________________________________/  |#
+#|________________________________________________________________________|#
 
 #'ClickValue' is the amount of currency per click
 #Default = 1
@@ -63,11 +65,11 @@ CurrencyDisplayName = "Nana's Silver Spoons"
 
 #--------------------------------------------------------------------------#
 
-#'GuiQuality' Changes the default gui with an improved gui
+#'UIQuality' Changes the default UI with an improved UI
 # 0 = Default
 # 1 = Improved quality
 
-GuiQuality = 0
+UIQuality = 0
 
 #--------------------------------------------------------------------------#
 #--------------------------------------------------------------------------#
@@ -114,7 +116,7 @@ clock = pygame.time.Clock()
 
 WidthLine = 0
 
-if GuiQuality == 0:
+if UIQuality == 0:
     WidthLine = 5
     XLine = 250
 else:
@@ -148,12 +150,12 @@ nana_click = pygame.transform.scale(nana_click, (23, 28))
 
 
 # Load Auto Images
-if GuiQuality == 0:
+if UIQuality == 0:
     auto_title_img = pygame.image.load("images/Autos/Title.png")
 else:
     auto_title_img = pygame.image.load("images/Autos/Title2.png")
 
-if GuiQuality == 0:
+if UIQuality == 0:
     auto_spoon_draw_img = pygame.image.load("images/Autos/spoon_draw.png")
     auto_spoon_tree_img = pygame.image.load("images/Autos/spoon_tree.png")
     auto_spoon_cave_img = pygame.image.load("images/Autos/spoon_cave.png")
